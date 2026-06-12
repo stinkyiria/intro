@@ -16,7 +16,15 @@ html {
     color: #4A4A4A;
 }
 
+.class2 {
+    position: absolute;
+    bottom: 50px;
+    left: 560px;
+    color-scheme: dark;
+}
+
 .btogether {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 20px;
