@@ -3,6 +3,21 @@ html {
     color: white;
 }
 
+/* divider for stuff */
+
+#id1 {
+    max-width: 20%;
+    height: auto;
+}
+
 .class1 {
     font-family: 'Fixedsys 62', sans-serif;
+    text-indent: 40%;
+    color: #4A4A4A;
+}
+
+.btogether {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
