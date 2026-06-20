@@ -66,7 +66,7 @@ async function ballsucker() {
         if (tr.indexOf(sentence) !== tr.length - 1) {
             await new Promise(r => setTimeout(r, 1500)); // pauses.
         }
-    } */
+    } */  // NOTE PLEASE REMEMBER TO REMOVE THIS STUPID COMMENTED OUT FEATURE PLEASE
     await new Promise(r => setTimeout(r, 1500));
     balls(aud, false);
     document.getElementById("MOMMY-MOMMY").style.display = "none";
