@@ -53,13 +53,13 @@ html {
     50% { opacity: 0; }
   }
 
- /* #overlay {
+ #overlay {
     position: fixed;
     top: 0; left: 0; width: 100vw; height: 100vh;
     background: radial-gradient(circle 300px at var(--x) var(--y), transparent, #000);
     pointer-events: none;
     z-index: 999;
-} */
+}
 
 /* main */
 
