@@ -18,16 +18,19 @@ function startMusic() {
 }
 
 if (poop !== undefined) {
-    poop.catch(banana => {
-        const poop2 = () => {
-            sound.play();
-            document.removeEventListener('click', poop2);
-            document.removeEventListener('keydown', poop2);
+    poop.catch(error => {
+        console.warn("Autoplay blocked, waiting for interaction:", error);
+        const attemptPlay = () => {
+            sound.play()
+                .then(() => {
+                    document.removeEventListener('click', attemptPlay);
+                    document.removeEventListener('keydown', attemptPlay);
+                })
+                .catch(err => console.error("Still blocked:", err));
         };
-
-        document.removeEventListener('click', poop2);
-        document.removeEventListener('keydown', poop2);
-    })
+        document.addEventListener('click', attemptPlay);
+        document.addEventListener('keydown', attemptPlay);
+    });
 }
 
 startMusic();
