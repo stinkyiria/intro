@@ -44,7 +44,6 @@ no();
 
 const el = document.getElementById("hi");
 const tr = [
-    "(Not apart but please click/tap your screen to get the desired output of this!)",
     "The room gets darker and darker.",
     "I lie down and reach for my flashlight near me.",
     "However, I feel nothing but the concrete ground.",
@@ -58,7 +57,7 @@ const tr = [
 ];
 
 async function ballsucker() {
-   for (let sentence of tr ) {
+   /* for (let sentence of tr ) {
         el.innerText = "";
         for (let char of sentence) {
             el.innerHTML += char;
@@ -67,10 +66,9 @@ async function ballsucker() {
         if (tr.indexOf(sentence) !== tr.length - 1) {
             await new Promise(r => setTimeout(r, 1500)); // pauses.
         }
-    } 
+    } */
     await new Promise(r => setTimeout(r, 1500));
     balls(aud, false);
-    document.body.style.cursor = "url('./images/cursor.cur') 0 0, auto";
     document.getElementById("MOMMY-MOMMY").style.display = "none";
     document.getElementById("stinkier").style.display = "block";
 
