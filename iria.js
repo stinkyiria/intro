@@ -9,7 +9,7 @@ function startMusic() {
     sound.play();
 
     const fade = setInterval(() => {
-        if (sound.volume < 0.2) {
+        if (sound.volume < 0.05) {
             sound.volume = Math.min(sound.volume + 0.02, 0.2);
         } else {
             clearInterval(fade);
@@ -52,7 +52,7 @@ const tr = [
 ];
 
 async function ballsucker() {
-    /* for (let sentence of tr ) {
+   /* for (let sentence of tr ) {
         el.innerText = "";
         for (let char of sentence) {
             el.innerHTML += char;
@@ -60,8 +60,9 @@ async function ballsucker() {
         }
         if (tr.indexOf(sentence) !== tr.length - 1) {
             await new Promise(r => setTimeout(r, 1500)); // pauses.
-        } 
+        }
     } */
+    await new Promise(r => setTimeout(r, 1500));
     aud.play();
     document.body.style.cursor = "url('./images/cursor.cur') 0 0, auto";
     document.getElementById("MOMMY-MOMMY").style.display = "none";
