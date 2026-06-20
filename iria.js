@@ -44,14 +44,14 @@ no();
 
 const el = document.getElementById("hi");
 const tr = [
-    "The room gets darker and darker.",
+/*    "The room gets darker and darker.",
     "I lie down and reach for my flashlight near me.",
     "However, I feel nothing but the concrete ground.",
     "My fingers brush against it again, before I pull away.",
     "I stare into the void. Quietly praying that I'd grab something.",
     "I reach one more time, desperate I'd grab something. Suddenly—",
     "My fingers brush against something with ridges.",
-    "I pick it up and feel a switch; was it my flashlight?",
+    "I pick it up and feel a switch; was it my flashlight?", */
     "In the darkness, it has to count for something...",
     "right?"
 ];
@@ -65,7 +65,9 @@ const ivePLayedTheseGamesBefore = [
 ]
 
 async function ballsucker() {
-   /* for (let sentence of tr ) {
+    const stopFlashingme = document.getElementById("overlay"); // just incase okay
+
+   for (let sentence of tr ) {
         el.innerText = "";
         for (let char of sentence) {
             el.innerHTML += char;
@@ -74,10 +76,11 @@ async function ballsucker() {
         if (tr.indexOf(sentence) !== tr.length - 1) {
             await new Promise(r => setTimeout(r, 1500)); // pauses.
         } 
-    } */
-    const isPLaying = !aud.paused;
+    }
+    const isPLaying = !sound.paused;
 
     if (!isPLaying) {
+        await new Promise(r => setTimeout(r, 1500));
         const overlay = document.getElementById("ov-flash");
         overlay.style.display = "flex";
 
@@ -99,6 +102,7 @@ async function ballsucker() {
     balls(aud, false);
     document.getElementById("MOMMY-MOMMY").style.display = "none";
     document.getElementById("stinkier").style.display = "block";
+    stopFlashingme.style.display = "block";
 
     window.addEventListener('mousemove', e => {
         document.documentElement.style.setProperty('--x', e.clientX + 'px');
