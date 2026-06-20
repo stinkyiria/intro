@@ -1,6 +1,7 @@
 html {
     background-color: #1A1A1A;
     color: white;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
 }
 
 /* divider for stuff */
@@ -52,6 +53,20 @@ html {
     from, to { opacity: 1; }
     50% { opacity: 0; }
   }
+
+  #ov-flash {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 400;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
  #overlay {
     position: fixed;
