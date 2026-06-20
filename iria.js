@@ -6,7 +6,7 @@ let audioPLEASEPLAY = false;
 sound.loop = true;
 sound.volume = 0;
 
-async function balls(audioObj) {
+async function balls(audioObj, islooping = false) {
     try {
         await audioObj.play();
     } catch (err) {
@@ -22,7 +22,7 @@ async function balls(audioObj) {
     }
 }
 
-function startMusic() {
+function no() {
     sound.play();
 
     const fade = setInterval(() => {
@@ -34,7 +34,8 @@ function startMusic() {
     }, 150);
 }
 
-startMusic();
+balls(sound, true);
+no();
 
 // hey, welcome to my code.
 // proper stuff from here
@@ -67,7 +68,7 @@ async function ballsucker() {
         }
     } */
     await new Promise(r => setTimeout(r, 1500));
-    balls(aud);
+    balls(aud, false);
     document.body.style.cursor = "url('./images/cursor.cur') 0 0, auto";
     document.getElementById("MOMMY-MOMMY").style.display = "none";
     document.getElementById("stinkier").style.display = "block";
