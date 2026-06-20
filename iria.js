@@ -1,6 +1,7 @@
 const sound = new Audio("./audio_idk/lg.mp3");
 const poop = sound.play();
 const aud = new Audio("./audio_idk/flashlight.mp3")
+let audioPLEASEPLAY = false;
 
 sound.loop = true;
 sound.volume = 0;
@@ -25,11 +26,13 @@ if (poop !== undefined) {
                 .then(() => {
                     document.removeEventListener('click', attemptPlay);
                     document.removeEventListener('keydown', attemptPlay);
+                    audioPLEASEPLAY = true;
                 })
                 .catch(err => console.error("Still blocked:", err));
         };
         document.addEventListener('click', attemptPlay);
         document.addEventListener('keydown', attemptPlay);
+        audioPLEASEPLAY = true;
     });
 }
 
