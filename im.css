@@ -5,6 +5,22 @@ html {
 
 /* divider for stuff */
 
+.background {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./images/wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: #333;
+}
+
 #id1 {
     max-width: 20%;
     height: auto;
@@ -43,4 +59,16 @@ html {
     background: radial-gradient(circle 300px at var(--x) var(--y), transparent, #000);
     pointer-events: none;
     z-index: 999;
+}
+
+/* main */
+
+#file-explorer {
+  z-index: 10;
+  position: relative;
+}
+
+.notepad-window {
+  z-index: 20;
+  position: absolute;
 }
