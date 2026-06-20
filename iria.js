@@ -6,6 +6,22 @@ let audioPLEASEPLAY = false;
 sound.loop = true;
 sound.volume = 0;
 
+async function balls(audioObj) {
+    try {
+        await audioObj.play();
+    } catch (err) {
+        console.warn("Autoplay blocked, waiting for interaction.");
+        const handler = () => {
+            audioObj.play().then(() => {
+                document.removeEventListener('click', handler);
+                document.removeEventListener('keydown', handler);
+            });
+        };
+        document.addEventListener('click', handler);
+        document.addEventListener('keydown', handler);
+    }
+}
+
 function startMusic() {
     sound.play();
 
@@ -16,24 +32,6 @@ function startMusic() {
             clearInterval(fade);
         }
     }, 150);
-}
-
-if (poop !== undefined) {
-    poop.catch(error => {
-        console.warn("Autoplay blocked, waiting for interaction:", error);
-        const attemptPlay = () => {
-            sound.play()
-                .then(() => {
-                    document.removeEventListener('click', attemptPlay);
-                    document.removeEventListener('keydown', attemptPlay);
-                    audioPLEASEPLAY = true;
-                })
-                .catch(err => console.error("Still blocked:", err));
-        };
-        document.addEventListener('click', attemptPlay);
-        document.addEventListener('keydown', attemptPlay);
-        audioPLEASEPLAY = true;
-    });
 }
 
 startMusic();
@@ -69,7 +67,7 @@ async function ballsucker() {
         }
     } */
     await new Promise(r => setTimeout(r, 1500));
-    aud.play();
+    balls(aud);
     document.body.style.cursor = "url('./images/cursor.cur') 0 0, auto";
     document.getElementById("MOMMY-MOMMY").style.display = "none";
     document.getElementById("stinkier").style.display = "block";
