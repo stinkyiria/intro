@@ -44,7 +44,7 @@ no();
 
 const el = document.getElementById("hi");
 const tr = [
-/*    "The room gets darker and darker.",
+/*   "The room gets darker and darker.",
     "I lie down and reach for my flashlight near me.",
     "However, I feel nothing but the concrete ground.",
     "My fingers brush against it again, before I pull away.",
@@ -67,7 +67,7 @@ const ivePLayedTheseGamesBefore = [
 async function ballsucker() {
     const stopFlashingme = document.getElementById("overlay"); // just incase okay
 
-   for (let sentence of tr ) {
+/*   for (let sentence of tr ) {
         el.innerText = "";
         for (let char of sentence) {
             el.innerHTML += char;
@@ -96,7 +96,7 @@ async function ballsucker() {
     } else {
         console.log("skipping because like, yk, its already playing wtv")
         overlay.style.display = "none";
-    }
+    } */
 
     await new Promise(r => setTimeout(r, 1500));
     balls(aud, false);
