@@ -68,7 +68,7 @@ let hasinteracted = false; // for music
 
 async function ballsucker() {
     const stopFlashingme = document.getElementById("overlay"); // just incase okay
- for (let sentence of tr ) {
+/*  for (let sentence of tr ) {
         el.innerText = "";
         for (let char of sentence) {
             el.innerHTML += char;
@@ -100,7 +100,7 @@ async function ballsucker() {
         console.log("skipping because like, yk, its already playing wtv")
         overlay.style.display = "none";
         hasinteracted = true;
-    }
+    } */
 
     await new Promise(r => setTimeout(r, 1500));
     balls(aud, false);
