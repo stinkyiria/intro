@@ -64,10 +64,11 @@ const ivePLayedTheseGamesBefore = [
     "Whatever. It's something."
 ]
 
+let hasinteracted = false; // for music
+
 async function ballsucker() {
     const stopFlashingme = document.getElementById("overlay"); // just incase okay
-
-/*   for (let sentence of tr ) {
+  for (let sentence of tr ) {
         el.innerText = "";
         for (let char of sentence) {
             el.innerHTML += char;
@@ -77,9 +78,10 @@ async function ballsucker() {
             await new Promise(r => setTimeout(r, 1500)); // pauses.
         } 
     }
+
     const isPLaying = !sound.paused;
 
-    if (!isPLaying) {
+    if (!isPLaying && !hasinteracted) {
         await new Promise(r => setTimeout(r, 1500));
         const overlay = document.getElementById("ov-flash");
         overlay.style.display = "flex";
@@ -87,6 +89,7 @@ async function ballsucker() {
         await new Promise(resolve => {
             overlay.addEventListener('click', () => {
                 overlay.style.display = "block";
+                hasinteracted = true;
                 resolve();
             }, { once: true });
         });
@@ -96,7 +99,8 @@ async function ballsucker() {
     } else {
         console.log("skipping because like, yk, its already playing wtv")
         overlay.style.display = "none";
-    } */
+        hasinteracted = true;
+    }
 
     await new Promise(r => setTimeout(r, 1500));
     balls(aud, false);
