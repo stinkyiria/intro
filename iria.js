@@ -68,7 +68,7 @@ let hasinteracted = false; // for music
 
 async function ballsucker() {
     const stopFlashingme = document.getElementById("overlay"); // just incase okay
-  for (let sentence of tr ) {
+ for (let sentence of tr ) {
         el.innerText = "";
         for (let char of sentence) {
             el.innerHTML += char;
