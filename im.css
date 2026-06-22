@@ -273,7 +273,48 @@ html, body {
   box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+.note-4 {
+  position: absolute;
+  top: 89px;
+  left: 994px;
+  color: black;
+  background-color: #7afcff;
+  padding: 20px;
+  width: 180px;
+  height: 180px;
+  transform: rotate(-13deg);
+  box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 500;
+}
+
 .note-1:hover, .note-2:hover, .note-3:hover {
   z-index: 500;
   transform: rotate(0deg) scale(1.05);
+}
+
+/* divider.. */
+
+.gpaper-container {
+  background-image: url("./images/gpaper.png");
+  background-color: white;
+  width: auto;
+  height: 500px;
+  position: absolute;
+  padding: 20px;
+  top: 91px;
+  left: 1102px;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 15px 20px 15px 20px;
+  box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 600;
+}
+
+#paperclip {
+  position: absolute;
+  width: auto;
+  height: 120px;
+  transform: rotate(13deg);
+  top: 570px;
+  left: 1395px;
+  z-index: 610;
 }
