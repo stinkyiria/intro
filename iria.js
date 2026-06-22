@@ -1,10 +1,13 @@
 const sound = new Audio("./audio_idk/lg.mp3");
 const poop = sound.play();
 const aud = new Audio("./audio_idk/flashlight.mp3")
+const fan = new Audio("./audio_idk/fannoise.mp3")
 let audioPLEASEPLAY = false;
 
 sound.loop = true;
 sound.volume = 0;
+fan.loop = true;
+fan.volume = 0.2;
 
 async function balls(audioObj, islooping = false) {
     try {
@@ -21,6 +24,8 @@ async function balls(audioObj, islooping = false) {
         document.addEventListener('keydown', handler);
     }
 }
+
+balls(fan, true);
 
 function no() {
     sound.play();
@@ -80,8 +85,9 @@ async function ballsucker() {
     }
 
     const isPLaying = !sound.paused;
+    if (hasinteracted) return;
 
-    if (!isPLaying && !hasinteracted) {
+    if (!isPLaying) {
         await new Promise(r => setTimeout(r, 1500));
         const overlay = document.getElementById("ov-flash");
         overlay.style.display = "flex";
@@ -116,3 +122,15 @@ async function ballsucker() {
 ballsucker();
 
 // main page
+
+
+function musicStopper() {
+    if (!sound.paused) {
+        sound.pause();
+        sound.currentTime = 0;
+        console.log("paused");
+    } else {
+        balls(sound, true);
+        console.log("playing");
+    }
+}

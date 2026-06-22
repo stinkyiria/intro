@@ -194,3 +194,24 @@ html, body {
   font-size: 0.9em;
   white-space: pre-wrap; 
 }
+
+/* so god help me save me from having dividers */
+
+.tape-container {
+  position: absolute;
+  top: 471px;
+  left: 726px;
+  transform: rotate(16deg);
+  z-index: 500;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#image-css {
+  width: 290px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.2);
+  display: block;
+}
