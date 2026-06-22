@@ -1,5 +1,17 @@
+# Dependencies
 node_modules/
-.output/
+
+# Build outputs
 dist/
 build/
+out/
+.output/
+
+# Environment variables
 .env
+.env.*
+!.env.example
+
+# Logs and system files
+*.log
+.DS_Store
