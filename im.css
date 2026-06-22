@@ -1,5 +1,5 @@
 html {
-    background-color: #1A1A1A;
+    background-color: #000000;
 }
 
 html, body {
@@ -19,6 +19,7 @@ html, body {
 #id1 {
     max-width: 20%;
     height: auto;
+    z-index: 10000;
 }
 
 #MOMMY-MOMMY {
@@ -27,12 +28,14 @@ html, body {
     font-size: 1.75em;
     display: inline-flex;
     align-items: center;
+    z-index: 10000;
   }
 
   .terminal-container {
     color: white;
     font-family: monospace;
     font-size: 1.75em;
+    z-index: 10000;
   }
   
   .cursor {
@@ -41,6 +44,7 @@ html, body {
     animation: blink-caret 0.75s step-end infinite;
     color: white;
     margin-left: 5px;
+    z-index: 10000;
   }
   
   @keyframes blink-caret {
@@ -62,12 +66,45 @@ html, body {
     cursor: pointer;
     color: white;
     text-shadow: 0 0 5px rgba(255,255,255,0.5);
+    z-index: 10000;
 }
 
 #hi {
   font-family: monospace;
   color: white;
   text-shadow: 0 0 5px rgba(255,255,255,0.5);
+  z-index: 10000;
+}
+
+#epikwarning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: red;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 20003;
+}
+
+#epikwarning p {
+  flex-shrink: 0;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+#sillywarning {
+  display: block;
+  max-width: 90%;
+  max-height: 50%;
+  margin: 20px auto;
+  border: 2px solid #555;
+  border-radius: 8px;
+  z-index: 20000;
 }
 
  #overlay {
@@ -76,7 +113,17 @@ html, body {
     background: radial-gradient(circle 200px at var(--x) var(--y), transparent, #000);
     pointer-events: none;
     animation: jitter 0.1s infinite;
-    z-index: 999;
+    z-index: 1000;
+} 
+
+#overlay2 {
+  position: fixed;
+  background-color: #000;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+  z-index: 2000;
 }
 
 @keyframes jitter {
