@@ -1,7 +1,5 @@
 html {
     background-color: #1A1A1A;
-    color: white;
-    text-shadow: 0 0 5px rgba(255,255,255,0.5);
 }
 
 html, body {
@@ -62,6 +60,14 @@ html, body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: white;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+#hi {
+  font-family: monospace;
+  color: white;
+  text-shadow: 0 0 5px rgba(255,255,255,0.5);
 }
 
  #overlay {
@@ -177,6 +183,7 @@ html, body {
   width: 300px;
   display: inline-block;
   transform: translate(130%, -30%) rotate(2deg);
+  z-index: 260;
 }
 
 .paper-bg {
@@ -202,7 +209,7 @@ html, body {
   top: 471px;
   left: 726px;
   transform: rotate(16deg);
-  z-index: 500;
+  z-index: 200;
   cursor: pointer;
   display: inline-block;
 }
@@ -214,4 +221,59 @@ html, body {
   padding: 0;
   box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.2);
   display: block;
+}
+
+/* love me love me love me love me */
+
+.note-container {
+  display: relative; 
+  height: auto;
+  font-family: "Shadows Into Light", monospace;
+  font-weight: bold;
+}
+
+.note-1{
+  position: absolute;
+  top: 168px;
+  left: 292px;  
+  color: black;
+  background-color: rgba(86, 155, 65, 1);
+  padding: 20px;
+  width: 180px;
+  transform: rotate(-6deg);
+  height: 180px;
+  box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 240;
+}
+
+.note-2 {
+  position: absolute;
+  top: 368px;
+  left: 855px;
+  color: black;
+  background-color: #fff740;
+  padding: 20px;
+  width: 180px;
+  height: 180px;
+  transform: rotate(4deg);
+  box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 130;
+}
+
+.note-3 {
+  position: absolute;
+  top: 466px;
+  left: 129px;
+  color: black;
+  background-color: #ff65a3;
+  padding: 20px;
+  width: 180px;
+  height: 180px;
+  transform: rotate(-6deg);
+  box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.note-1:hover, .note-2:hover, .note-3:hover {
+  z-index: 500;
+  transform: rotate(0deg) scale(1.05);
 }
