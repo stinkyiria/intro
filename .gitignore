@@ -15,3 +15,8 @@ out/
 # Logs and system files
 *.log
 .DS_Store
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
