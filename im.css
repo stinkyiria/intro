@@ -231,22 +231,27 @@ html, body {
   display: inline-block;
   transform: translate(130%, -30%) rotate(2deg);
   z-index: 260;
+  display: grid;
+  grid-template-areas: "overlay3";
+  overflow: hidden;
 }
 
 .paper-bg {
   width: 100%;
   display: block;
+  grid-area: overlay3;
+  overflow: hidden;
 }
 
 .paper-text {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  right: 30px;
+  grid-area: overlay3;
+  padding: 13px;
   color: black;
   font-family: monospace;
-  font-size: 0.9em;
+  font-size: 0.7rem;
   white-space: pre-wrap; 
+  box-sizing: overlay3;
+  overflow: hidden;
 }
 
 /* so god help me save me from having dividers */
